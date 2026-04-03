@@ -6,7 +6,7 @@
 /*   By: elmondo <elmondo@student.42firenze.it>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 14:38:59 by elmondo           #+#    #+#             */
-/*   Updated: 2026/03/29 15:08:09 by elmondo          ###   ########.fr       */
+/*   Updated: 2026/04/02 10:21:19 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,9 @@ int main(void)
 	}
 	std::stringstream ss(input);
 	ss >> N;
-	while (1)
-	{
-		std::cout << "Type a name for your zombies" << std::endl;
-		if (!std::getline(std::cin, input))
-		{
-			std::cout << std::endl;
-			std::cout << "Leaving.." << std::endl;
-			return 0;
-		}
-		if (!input.empty())
-			break;
-	}
-	horde = zombieHorde(N, input);
+
+	
+	horde = zombieHorde(N, "Bob");
 	for (int i = 0; i < N; i++)
 	{
 		horde[i].announce();
